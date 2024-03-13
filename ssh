@@ -1,0 +1,32 @@
+Generation of SSH Key, Adding it in GitHub and Connection Test
+
+1.Start ssh agent
+eval $(ssh-agent -s)
+
+2.to generate ssh key
+ssh-keygen -t rsa -b 4096 -C "klabhishek1992@gmail.com"
+
+3.to display generated sha
+cat /c/Users/ADMIN/.ssh/id_rsa.pub
+
+4.copy SSH key and paste it in github account
+
+5.to add identity into ssh agent
+ssh-add ~/.ssh/id_rsa
+
+6.to display added identity 
+ssh-add -l
+
+7.for authentication
+ssh -T git@github.com
+
+You may see a warning like this:
+	> The authenticity of host 'github.com (IP ADDRESS)' can't be established.
+	> ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+	> Are you sure you want to continue connecting (yes/no)?
+Yes
+
+	> Hi USERNAME! You've successfully authenticated, but GitHub does not
+	> provide shell access.
+
+Verify that the resulting message contains your username

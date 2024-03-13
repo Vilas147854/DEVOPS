@@ -1,0 +1,20 @@
+goto cmd-> files
+docker --version
+mkdir vilas
+cd vilas
+cat >Dockerfile->error
+goto->cdrive->user->vilas->DOckerfile->open with vscode
+write this code leave space after each line:
+  FROM ubuntu
+  MAINTAINER vilas147854 (name of docker) vilas147854@gmail.com
+  RUN apt-get update
+  CMD ["echo","hello"]
+
+save and -> come to cmd
+docker build -t my:01
+docker run my:01
+docker tag my:01 vilas147854/Demo:02         //new tag
+docker push vilas147854/Demo:02
+docker rmi vilas147854/Demo:02
+docker pull vilas147854/Demo:02
+docker images
